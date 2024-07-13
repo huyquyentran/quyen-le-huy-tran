@@ -1,0 +1,13 @@
+.vscode
+node_modules
+npm-debug.log
+Dockerfile
+docker-compose.yml
+.dockerignore
+.env*
+.git
+.gitignore
+.eslintrc.json
+.gitlab-ci.yml
+.lintstagedrc.json
+**/.DS_Store

@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  api:
+    image: node-api
+    build:
+      target: development
+    command: npm run dev
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:14.0
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+  default:
+    name: node-network
+
+volumes:
+  postgres_data:
