@@ -72,7 +72,7 @@ FE should listen this event and re-retrieve top 10 users scores when this event 
 
 
 ### Execute flow
-// Image here
+![alt text](https://github.com/huyquyentran/quyen-le-huy-tran/blob/main/src/problem6/diagram.png?raw=true)
 
 ## Improvements
 ### Performance Optimization for Top 10 Retrieval
